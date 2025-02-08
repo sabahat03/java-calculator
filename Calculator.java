@@ -15,6 +15,8 @@ public class Calculator {
         System.out.println("2. Subtraction");
         System.out.println("3. Multiplication");
         System.out.println("4. Division");
+        System.out.println("5. Modulus");
+        System.out.println("6. Exponentiation");
 
         int choice = scanner.nextInt();
 
@@ -36,6 +38,16 @@ public class Calculator {
                     return;
                 }
                 result = num1 / num2;
+                break;
+            case 5:
+                if (num2 == 0) {
+                    System.out.println("Error: Modulus by zero is not allowed.");
+                    return;
+                }
+                result = num1 % num2;
+                break;
+            case 6:
+                result = Math.pow(num1, num2);
                 break;
             default:
                 System.out.println("Invalid choice.");
